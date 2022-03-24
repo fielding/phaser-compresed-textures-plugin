@@ -25,7 +25,6 @@ import PVRParser from './PVRParser';
  * @extends Phaser.Loader.MultiFile
  * @memberof Phaser.Loader.FileTypes
  * @constructor
- * @since 3.60.0
  *
  * @param {Phaser.Loader.LoaderPlugin} loader - A reference to the Loader that is responsible for this file.
  * @param {string} key - The key to use for this file.
@@ -86,7 +85,6 @@ var CompressedTextureFile = new Class({
    * Called by each File when it finishes loading.
    *
    * @method Phaser.Loader.FileTypes.CompressedTextureFile#onFileComplete
-   * @since 3.60.0
    *
    * @param {Phaser.Loader.File} file - The File that has completed processing.
    */
@@ -166,7 +164,6 @@ var CompressedTextureFile = new Class({
    * Adds this file to its target cache upon successful loading and processing.
    *
    * @method Phaser.Loader.FileTypes.CompressedTextureFile#addToCache
-   * @since 3.60.0
    */
   addToCache: function () {
     console.log('addToCache()');
@@ -208,7 +205,6 @@ var CompressedTextureFile = new Class({
    * Adds all of the multi-file entties to their target caches upon successful loading and processing.
    *
    * @method Phaser.Loader.FileTypes.CompressedTextureFile#addMultiToCache
-   * @since 3.60.0
    */
   addMultiToCache: function () {
     var entry = this.config;

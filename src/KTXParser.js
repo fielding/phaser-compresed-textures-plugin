@@ -9,7 +9,6 @@
  *
  * @function Phaser.Textures.Parsers.KTXParser
  * @memberof Phaser.Textures.Parsers
- * @since 3.60.0
  *
  * @param {ArrayBuffer} data - The data object created by the Compressed Texture File Loader.
  *
