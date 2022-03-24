@@ -1,0 +1,20 @@
+{
+  "name": "phaser-compressed-texture-plugin",
+  "version": "1.0.0",
+  "description": "Phaser 3 Compressed Texture Plugin",
+  "source": "src/CompressedTexturePlugin.ts",
+  "module": "dist/CompressedTexturePlugin.js",
+  "scripts": {
+    "dev": "parcel watch",
+    "build": "parcel build"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "parcel": "^2.4.0",
+    "phaser": "3.24.1"
+  },
+  "devDependencies": {
+    "@parcel/transformer-typescript-types": "^2.4.0",
+    "typescript": "^4.6.2"
+  }
+}
