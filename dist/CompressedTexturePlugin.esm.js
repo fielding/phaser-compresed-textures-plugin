@@ -1,31 +1,18 @@
-var $7Rbkr$phasersrcloaderfiletypesAtlasJSONFile = require("phaser/src/loader/filetypes/AtlasJSONFile");
-var $7Rbkr$phasersrctexturesparsersJSONHash = require("phaser/src/textures/parsers/JSONHash");
-var $7Rbkr$phasersrctexturesevents = require("phaser/src/textures/events");
-var $7Rbkr$phasersrcutilsobjectMerge = require("phaser/src/utils/object/Merge");
-var $7Rbkr$phasersrcloaderfiletypesImageFile = require("phaser/src/loader/filetypes/ImageFile");
-var $7Rbkr$phasersrcutilsobjectIsPlainObject = require("phaser/src/utils/object/IsPlainObject");
-var $7Rbkr$phasersrcutilsobjectGetFastValue = require("phaser/src/utils/object/GetFastValue");
-var $7Rbkr$phasersrcloaderfiletypesMultiAtlasFile = require("phaser/src/loader/filetypes/MultiAtlasFile");
-var $7Rbkr$phasersrcmathpow2IsSizePowerOfTwo = require("phaser/src/math/pow2/IsSizePowerOfTwo");
-var $7Rbkr$phasersrcconst = require("phaser/src/const");
-var $7Rbkr$phasersrcloaderfiletypesBinaryFile = require("phaser/src/loader/filetypes/BinaryFile");
-var $7Rbkr$phasersrcutilsClass = require("phaser/src/utils/Class");
-var $7Rbkr$phasersrcloaderfiletypesJSONFile = require("phaser/src/loader/filetypes/JSONFile");
-var $7Rbkr$phasersrcloaderMultiFile = require("phaser/src/loader/MultiFile");
+import $5Vb9O$phasersrcloaderfiletypesAtlasJSONFile from "phaser/src/loader/filetypes/AtlasJSONFile";
+import {JSONHash as $5Vb9O$JSONHash} from "phaser/src/textures/parsers/JSONHash";
+import $5Vb9O$phasersrctexturesevents from "phaser/src/textures/events";
+import $5Vb9O$phasersrcutilsobjectMerge from "phaser/src/utils/object/Merge";
+import $5Vb9O$phasersrcloaderfiletypesImageFile from "phaser/src/loader/filetypes/ImageFile";
+import $5Vb9O$phasersrcutilsobjectIsPlainObject from "phaser/src/utils/object/IsPlainObject";
+import $5Vb9O$phasersrcutilsobjectGetFastValue from "phaser/src/utils/object/GetFastValue";
+import $5Vb9O$phasersrcloaderfiletypesMultiAtlasFile from "phaser/src/loader/filetypes/MultiAtlasFile";
+import $5Vb9O$phasersrcmathpow2IsSizePowerOfTwo from "phaser/src/math/pow2/IsSizePowerOfTwo";
+import $5Vb9O$phasersrcconst from "phaser/src/const";
+import $5Vb9O$phasersrcloaderfiletypesBinaryFile from "phaser/src/loader/filetypes/BinaryFile";
+import $5Vb9O$phasersrcutilsClass from "phaser/src/utils/Class";
+import $5Vb9O$phasersrcloaderfiletypesJSONFile from "phaser/src/loader/filetypes/JSONFile";
+import $5Vb9O$phasersrcloaderMultiFile from "phaser/src/loader/MultiFile";
 
-function $parcel$interopDefault(a) {
-  return a && a.__esModule ? a.default : a;
-}
-function $parcel$defineInteropFlag(a) {
-  Object.defineProperty(a, '__esModule', {value: true, configurable: true});
-}
-function $parcel$export(e, n, v, s) {
-  Object.defineProperty(e, n, {get: v, set: s, enumerable: true, configurable: true});
-}
-
-$parcel$defineInteropFlag(module.exports);
-
-$parcel$export(module.exports, "default", () => $6db036c6cbb638f8$export$2e2bcd8739ae039);
 
 
 
@@ -55,7 +42,7 @@ $parcel$export(module.exports, "default", () => $6db036c6cbb638f8$export$2e2bcd8
  * @param {ArrayBuffer} data - The data object created by the Compressed Texture File Loader.
  *
  * @return {Phaser.Types.Textures.CompressedTextureData} The Compressed Texture data.
- */ var $b26d6f487989d19e$var$KTXParser = function(data) {
+ */ var $8b581d90e03f5fd4$var$KTXParser = function(data) {
     var idCheck = [
         171,
         75,
@@ -117,7 +104,7 @@ $parcel$export(module.exports, "default", () => $6db036c6cbb638f8$export$2e2bcd8
         generateMipmap: false
     };
 };
-var $b26d6f487989d19e$export$2e2bcd8739ae039 = $b26d6f487989d19e$var$KTXParser;
+var $8b581d90e03f5fd4$export$2e2bcd8739ae039 = $8b581d90e03f5fd4$var$KTXParser;
 
 
 /**
@@ -126,98 +113,98 @@ var $b26d6f487989d19e$export$2e2bcd8739ae039 = $b26d6f487989d19e$var$KTXParser;
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */ /**
  * @ignore
- */ function $537a5a4279d59773$var$GetSize(width, height, x, y, dx, dy, mult) {
+ */ function $9da6bd3fe45b07d9$var$GetSize(width, height, x, y, dx, dy, mult) {
     if (mult === undefined) mult = 16;
     return Math.floor((width + x) / dx) * Math.floor((height + y) / dy) * mult;
 }
 /**
  * @ignore
- */ function $537a5a4279d59773$var$PVRTC2bppSize(width, height) {
+ */ function $9da6bd3fe45b07d9$var$PVRTC2bppSize(width, height) {
     width = Math.max(width, 16);
     height = Math.max(height, 8);
     return width * height / 4;
 }
 /**
  * @ignore
- */ function $537a5a4279d59773$var$PVRTC4bppSize(width, height) {
+ */ function $9da6bd3fe45b07d9$var$PVRTC4bppSize(width, height) {
     width = Math.max(width, 8);
     height = Math.max(height, 8);
     return width * height / 2;
 }
 /**
  * @ignore
- */ function $537a5a4279d59773$var$DXTEtcSmallSize(width, height) {
-    return $537a5a4279d59773$var$GetSize(width, height, 3, 3, 4, 4, 8);
+ */ function $9da6bd3fe45b07d9$var$DXTEtcSmallSize(width, height) {
+    return $9da6bd3fe45b07d9$var$GetSize(width, height, 3, 3, 4, 4, 8);
 }
 /**
  * @ignore
- */ function $537a5a4279d59773$var$DXTEtcAstcBigSize(width, height) {
-    return $537a5a4279d59773$var$GetSize(width, height, 3, 3, 4, 4);
+ */ function $9da6bd3fe45b07d9$var$DXTEtcAstcBigSize(width, height) {
+    return $9da6bd3fe45b07d9$var$GetSize(width, height, 3, 3, 4, 4);
 }
 /**
  * @ignore
- */ function $537a5a4279d59773$var$ATC5x4Size(width, height) {
-    return $537a5a4279d59773$var$GetSize(width, height, 4, 3, 5, 4);
+ */ function $9da6bd3fe45b07d9$var$ATC5x4Size(width, height) {
+    return $9da6bd3fe45b07d9$var$GetSize(width, height, 4, 3, 5, 4);
 }
 /**
  * @ignore
- */ function $537a5a4279d59773$var$ATC5x5Size(width, height) {
-    return $537a5a4279d59773$var$GetSize(width, height, 4, 4, 5, 5);
+ */ function $9da6bd3fe45b07d9$var$ATC5x5Size(width, height) {
+    return $9da6bd3fe45b07d9$var$GetSize(width, height, 4, 4, 5, 5);
 }
 /**
  * @ignore
- */ function $537a5a4279d59773$var$ATC6x5Size(width, height) {
-    return $537a5a4279d59773$var$GetSize(width, height, 5, 4, 6, 5);
+ */ function $9da6bd3fe45b07d9$var$ATC6x5Size(width, height) {
+    return $9da6bd3fe45b07d9$var$GetSize(width, height, 5, 4, 6, 5);
 }
 /**
  * @ignore
- */ function $537a5a4279d59773$var$ATC6x6Size(width, height) {
-    return $537a5a4279d59773$var$GetSize(width, height, 5, 5, 6, 6);
+ */ function $9da6bd3fe45b07d9$var$ATC6x6Size(width, height) {
+    return $9da6bd3fe45b07d9$var$GetSize(width, height, 5, 5, 6, 6);
 }
 /**
  * @ignore
- */ function $537a5a4279d59773$var$ATC8x5Size(width, height) {
-    return $537a5a4279d59773$var$GetSize(width, height, 7, 4, 8, 5);
+ */ function $9da6bd3fe45b07d9$var$ATC8x5Size(width, height) {
+    return $9da6bd3fe45b07d9$var$GetSize(width, height, 7, 4, 8, 5);
 }
 /**
  * @ignore
- */ function $537a5a4279d59773$var$ATC8x6Size(width, height) {
-    return $537a5a4279d59773$var$GetSize(width, height, 7, 5, 8, 6);
+ */ function $9da6bd3fe45b07d9$var$ATC8x6Size(width, height) {
+    return $9da6bd3fe45b07d9$var$GetSize(width, height, 7, 5, 8, 6);
 }
 /**
  * @ignore
- */ function $537a5a4279d59773$var$ATC8x8Size(width, height) {
-    return $537a5a4279d59773$var$GetSize(width, height, 7, 7, 8, 8);
+ */ function $9da6bd3fe45b07d9$var$ATC8x8Size(width, height) {
+    return $9da6bd3fe45b07d9$var$GetSize(width, height, 7, 7, 8, 8);
 }
 /**
  * @ignore
- */ function $537a5a4279d59773$var$ATC10x5Size(width, height) {
-    return $537a5a4279d59773$var$GetSize(width, height, 9, 4, 10, 5);
+ */ function $9da6bd3fe45b07d9$var$ATC10x5Size(width, height) {
+    return $9da6bd3fe45b07d9$var$GetSize(width, height, 9, 4, 10, 5);
 }
 /**
  * @ignore
- */ function $537a5a4279d59773$var$ATC10x6Size(width, height) {
-    return $537a5a4279d59773$var$GetSize(width, height, 9, 5, 10, 6);
+ */ function $9da6bd3fe45b07d9$var$ATC10x6Size(width, height) {
+    return $9da6bd3fe45b07d9$var$GetSize(width, height, 9, 5, 10, 6);
 }
 /**
  * @ignore
- */ function $537a5a4279d59773$var$ATC10x8Size(width, height) {
-    return $537a5a4279d59773$var$GetSize(width, height, 9, 7, 10, 8);
+ */ function $9da6bd3fe45b07d9$var$ATC10x8Size(width, height) {
+    return $9da6bd3fe45b07d9$var$GetSize(width, height, 9, 7, 10, 8);
 }
 /**
  * @ignore
- */ function $537a5a4279d59773$var$ATC10x10Size(width, height) {
-    return $537a5a4279d59773$var$GetSize(width, height, 9, 9, 10, 10);
+ */ function $9da6bd3fe45b07d9$var$ATC10x10Size(width, height) {
+    return $9da6bd3fe45b07d9$var$GetSize(width, height, 9, 9, 10, 10);
 }
 /**
  * @ignore
- */ function $537a5a4279d59773$var$ATC12x10Size(width, height) {
-    return $537a5a4279d59773$var$GetSize(width, height, 11, 9, 12, 10);
+ */ function $9da6bd3fe45b07d9$var$ATC12x10Size(width, height) {
+    return $9da6bd3fe45b07d9$var$GetSize(width, height, 11, 9, 12, 10);
 }
 /**
  * @ignore
- */ function $537a5a4279d59773$var$ATC12x12Size(width, height) {
-    return $537a5a4279d59773$var$GetSize(width, height, 11, 11, 12, 12);
+ */ function $9da6bd3fe45b07d9$var$ATC12x12Size(width, height) {
+    return $9da6bd3fe45b07d9$var$GetSize(width, height, 11, 11, 12, 12);
 }
 /**
  * @ignore
@@ -250,117 +237,117 @@ var $b26d6f487989d19e$export$2e2bcd8739ae039 = $b26d6f487989d19e$var$KTXParser;
  * 38: COMPRESSED_RGBA_ASTC_10x10_KHR
  * 39: COMPRESSED_RGBA_ASTC_12x10_KHR
  * 40: COMPRESSED_RGBA_ASTC_12x12_KHR
- */ var $537a5a4279d59773$var$FORMATS = {
+ */ var $9da6bd3fe45b07d9$var$FORMATS = {
     0: {
-        sizeFunc: $537a5a4279d59773$var$PVRTC2bppSize,
+        sizeFunc: $9da6bd3fe45b07d9$var$PVRTC2bppSize,
         glFormat: 35841
     },
     1: {
-        sizeFunc: $537a5a4279d59773$var$PVRTC2bppSize,
+        sizeFunc: $9da6bd3fe45b07d9$var$PVRTC2bppSize,
         glFormat: 35843
     },
     2: {
-        sizeFunc: $537a5a4279d59773$var$PVRTC4bppSize,
+        sizeFunc: $9da6bd3fe45b07d9$var$PVRTC4bppSize,
         glFormat: 35840
     },
     3: {
-        sizeFunc: $537a5a4279d59773$var$PVRTC4bppSize,
+        sizeFunc: $9da6bd3fe45b07d9$var$PVRTC4bppSize,
         glFormat: 35842
     },
     6: {
-        sizeFunc: $537a5a4279d59773$var$DXTEtcSmallSize,
+        sizeFunc: $9da6bd3fe45b07d9$var$DXTEtcSmallSize,
         glFormat: 36196
     },
     7: {
-        sizeFunc: $537a5a4279d59773$var$DXTEtcSmallSize,
+        sizeFunc: $9da6bd3fe45b07d9$var$DXTEtcSmallSize,
         glFormat: 33776
     },
     8: {
-        sizeFunc: $537a5a4279d59773$var$DXTEtcAstcBigSize,
+        sizeFunc: $9da6bd3fe45b07d9$var$DXTEtcAstcBigSize,
         glFormat: 33777
     },
     9: {
-        sizeFunc: $537a5a4279d59773$var$DXTEtcAstcBigSize,
+        sizeFunc: $9da6bd3fe45b07d9$var$DXTEtcAstcBigSize,
         glFormat: 33778
     },
     11: {
-        sizeFunc: $537a5a4279d59773$var$DXTEtcAstcBigSize,
+        sizeFunc: $9da6bd3fe45b07d9$var$DXTEtcAstcBigSize,
         glFormat: 33779
     },
     22: {
-        sizeFunc: $537a5a4279d59773$var$DXTEtcSmallSize,
+        sizeFunc: $9da6bd3fe45b07d9$var$DXTEtcSmallSize,
         glFormat: 37492
     },
     23: {
-        sizeFunc: $537a5a4279d59773$var$DXTEtcAstcBigSize,
+        sizeFunc: $9da6bd3fe45b07d9$var$DXTEtcAstcBigSize,
         glFormat: 37496
     },
     24: {
-        sizeFunc: $537a5a4279d59773$var$DXTEtcSmallSize,
+        sizeFunc: $9da6bd3fe45b07d9$var$DXTEtcSmallSize,
         glFormat: 37494
     },
     25: {
-        sizeFunc: $537a5a4279d59773$var$DXTEtcSmallSize,
+        sizeFunc: $9da6bd3fe45b07d9$var$DXTEtcSmallSize,
         glFormat: 37488
     },
     26: {
-        sizeFunc: $537a5a4279d59773$var$DXTEtcAstcBigSize,
+        sizeFunc: $9da6bd3fe45b07d9$var$DXTEtcAstcBigSize,
         glFormat: 37490
     },
     27: {
-        sizeFunc: $537a5a4279d59773$var$DXTEtcAstcBigSize,
+        sizeFunc: $9da6bd3fe45b07d9$var$DXTEtcAstcBigSize,
         glFormat: 37808
     },
     28: {
-        sizeFunc: $537a5a4279d59773$var$ATC5x4Size,
+        sizeFunc: $9da6bd3fe45b07d9$var$ATC5x4Size,
         glFormat: 37809
     },
     29: {
-        sizeFunc: $537a5a4279d59773$var$ATC5x5Size,
+        sizeFunc: $9da6bd3fe45b07d9$var$ATC5x5Size,
         glFormat: 37810
     },
     30: {
-        sizeFunc: $537a5a4279d59773$var$ATC6x5Size,
+        sizeFunc: $9da6bd3fe45b07d9$var$ATC6x5Size,
         glFormat: 37811
     },
     31: {
-        sizeFunc: $537a5a4279d59773$var$ATC6x6Size,
+        sizeFunc: $9da6bd3fe45b07d9$var$ATC6x6Size,
         glFormat: 37812
     },
     32: {
-        sizeFunc: $537a5a4279d59773$var$ATC8x5Size,
+        sizeFunc: $9da6bd3fe45b07d9$var$ATC8x5Size,
         glFormat: 37813
     },
     33: {
-        sizeFunc: $537a5a4279d59773$var$ATC8x6Size,
+        sizeFunc: $9da6bd3fe45b07d9$var$ATC8x6Size,
         glFormat: 37814
     },
     34: {
-        sizeFunc: $537a5a4279d59773$var$ATC8x8Size,
+        sizeFunc: $9da6bd3fe45b07d9$var$ATC8x8Size,
         glFormat: 37815
     },
     35: {
-        sizeFunc: $537a5a4279d59773$var$ATC10x5Size,
+        sizeFunc: $9da6bd3fe45b07d9$var$ATC10x5Size,
         glFormat: 37816
     },
     36: {
-        sizeFunc: $537a5a4279d59773$var$ATC10x6Size,
+        sizeFunc: $9da6bd3fe45b07d9$var$ATC10x6Size,
         glFormat: 37817
     },
     37: {
-        sizeFunc: $537a5a4279d59773$var$ATC10x8Size,
+        sizeFunc: $9da6bd3fe45b07d9$var$ATC10x8Size,
         glFormat: 37818
     },
     38: {
-        sizeFunc: $537a5a4279d59773$var$ATC10x10Size,
+        sizeFunc: $9da6bd3fe45b07d9$var$ATC10x10Size,
         glFormat: 37819
     },
     39: {
-        sizeFunc: $537a5a4279d59773$var$ATC12x10Size,
+        sizeFunc: $9da6bd3fe45b07d9$var$ATC12x10Size,
         glFormat: 37820
     },
     40: {
-        sizeFunc: $537a5a4279d59773$var$ATC12x12Size,
+        sizeFunc: $9da6bd3fe45b07d9$var$ATC12x12Size,
         glFormat: 37821
     }
 };
@@ -374,12 +361,12 @@ var $b26d6f487989d19e$export$2e2bcd8739ae039 = $b26d6f487989d19e$var$KTXParser;
  * @param {ArrayBuffer} data - The data object created by the Compressed Texture File Loader.
  *
  * @return {Phaser.Types.Textures.CompressedTextureData} The Compressed Texture data.
- */ var $537a5a4279d59773$var$PVRParser = function(data) {
+ */ var $9da6bd3fe45b07d9$var$PVRParser = function(data) {
     var header = new Uint32Array(data, 0, 13);
     //  PIXEL_FORMAT_INDEX
     var pvrFormat = header[2];
-    var internalFormat = $537a5a4279d59773$var$FORMATS[pvrFormat].glFormat;
-    var sizeFunction = $537a5a4279d59773$var$FORMATS[pvrFormat].sizeFunc;
+    var internalFormat = $9da6bd3fe45b07d9$var$FORMATS[pvrFormat].glFormat;
+    var sizeFunction = $9da6bd3fe45b07d9$var$FORMATS[pvrFormat].sizeFunc;
     //  MIPMAPCOUNT_INDEX
     var mipmapLevels = header[11];
     //  WIDTH_INDEX
@@ -413,7 +400,7 @@ var $b26d6f487989d19e$export$2e2bcd8739ae039 = $b26d6f487989d19e$var$KTXParser;
         generateMipmap: false
     };
 };
-var $537a5a4279d59773$export$2e2bcd8739ae039 = $537a5a4279d59773$var$PVRParser;
+var $9da6bd3fe45b07d9$export$2e2bcd8739ae039 = $9da6bd3fe45b07d9$var$PVRParser;
 
 
 /**
@@ -434,8 +421,8 @@ var $537a5a4279d59773$export$2e2bcd8739ae039 = $537a5a4279d59773$var$PVRParser;
  * @param {string} key - The key to use for this file.
  * @param {Phaser.Types.Loader.FileTypes.CompressedTextureFileEntry} entry - The compressed texture file entry to load.
  * @param {Phaser.Types.Loader.XHRSettingsObject} [xhrSettings] - Extra XHR Settings specifically for this file.
- */ var $1376e04d92df3da4$var$CompressedTextureFile = new ($parcel$interopDefault($7Rbkr$phasersrcutilsClass))({
-    Extends: ($parcel$interopDefault($7Rbkr$phasersrcloaderMultiFile)),
+ */ var $895fbc78e648d411$var$CompressedTextureFile = new $5Vb9O$phasersrcutilsClass({
+    Extends: $5Vb9O$phasersrcloaderMultiFile,
     initialize: function CompressedTextureFile(loader, key, entry, xhrSettings) {
         console.log('CompressedTextureFile()::ctor', {
             loader: loader,
@@ -444,13 +431,13 @@ var $537a5a4279d59773$export$2e2bcd8739ae039 = $537a5a4279d59773$var$PVRParser;
             xhrSettings: xhrSettings
         });
         if (entry.multiAtlasURL) {
-            var multi = new ($parcel$interopDefault($7Rbkr$phasersrcloaderfiletypesJSONFile))(loader, {
+            var multi = new $5Vb9O$phasersrcloaderfiletypesJSONFile(loader, {
                 key: key,
                 url: entry.multiAtlasURL,
                 xhrSettings: xhrSettings,
                 config: entry
             });
-            ($parcel$interopDefault($7Rbkr$phasersrcloaderMultiFile)).call(this, loader, 'texture', key, [
+            $5Vb9O$phasersrcloaderMultiFile.call(this, loader, 'texture', key, [
                 multi
             ]);
         } else {
@@ -459,7 +446,7 @@ var $537a5a4279d59773$export$2e2bcd8739ae039 = $537a5a4279d59773$var$PVRParser;
                 extension: extension
             });
             if (!entry.type) entry.type = extension.toLowerCase() === 'ktx' ? 'KTX' : 'PVR';
-            var image = new ($parcel$interopDefault($7Rbkr$phasersrcloaderfiletypesBinaryFile))(loader, {
+            var image = new $5Vb9O$phasersrcloaderfiletypesBinaryFile(loader, {
                 key: key,
                 url: entry.textureURL,
                 extension: extension,
@@ -470,17 +457,17 @@ var $537a5a4279d59773$export$2e2bcd8739ae039 = $537a5a4279d59773$var$PVRParser;
                 image: image
             });
             if (entry.atlasURL) {
-                var data = new ($parcel$interopDefault($7Rbkr$phasersrcloaderfiletypesJSONFile))(loader, {
+                var data = new $5Vb9O$phasersrcloaderfiletypesJSONFile(loader, {
                     key: key,
                     url: entry.atlasURL,
                     xhrSettings: xhrSettings,
                     config: entry
                 });
-                ($parcel$interopDefault($7Rbkr$phasersrcloaderMultiFile)).call(this, loader, 'texture', key, [
+                $5Vb9O$phasersrcloaderMultiFile.call(this, loader, 'texture', key, [
                     image,
                     data
                 ]);
-            } else ($parcel$interopDefault($7Rbkr$phasersrcloaderMultiFile)).call(this, loader, 'texture', key, [
+            } else $5Vb9O$phasersrcloaderMultiFile.call(this, loader, 'texture', key, [
                 image
             ]);
         }
@@ -506,10 +493,10 @@ var $537a5a4279d59773$export$2e2bcd8739ae039 = $537a5a4279d59773$var$PVRParser;
                 var currentBaseURL = loader.baseURL;
                 var currentPath = loader.path;
                 var currentPrefix = loader.prefix;
-                var baseURL = ($parcel$interopDefault($7Rbkr$phasersrcutilsobjectGetFastValue))(config, 'multiBaseURL', this.baseURL);
-                var path = ($parcel$interopDefault($7Rbkr$phasersrcutilsobjectGetFastValue))(config, 'multiPath', this.path);
-                var prefix = ($parcel$interopDefault($7Rbkr$phasersrcutilsobjectGetFastValue))(config, 'prefix', this.prefix);
-                var textureXhrSettings = ($parcel$interopDefault($7Rbkr$phasersrcutilsobjectGetFastValue))(config, 'textureXhrSettings');
+                var baseURL = $5Vb9O$phasersrcutilsobjectGetFastValue(config, 'multiBaseURL', this.baseURL);
+                var path = $5Vb9O$phasersrcutilsobjectGetFastValue(config, 'multiPath', this.path);
+                var prefix = $5Vb9O$phasersrcutilsobjectGetFastValue(config, 'prefix', this.prefix);
+                var textureXhrSettings = $5Vb9O$phasersrcutilsobjectGetFastValue(config, 'textureXhrSettings');
                 if (baseURL) loader.setBaseURL(baseURL);
                 if (path) loader.setPath(path);
                 if (prefix) loader.setPrefix(prefix);
@@ -517,12 +504,12 @@ var $537a5a4279d59773$export$2e2bcd8739ae039 = $537a5a4279d59773$var$PVRParser;
                     //  "image": "texture-packer-multi-atlas-0.png",
                     var textureURL = textures[i].image;
                     var key = 'CMA' + this.multiKeyIndex + '_' + textureURL;
-                    var image = new ($parcel$interopDefault($7Rbkr$phasersrcloaderfiletypesBinaryFile))(loader, key, textureURL, textureXhrSettings);
+                    var image = new $5Vb9O$phasersrcloaderfiletypesBinaryFile(loader, key, textureURL, textureXhrSettings);
                     this.addToMultiFile(image);
                     loader.addFile(image);
                     //  "normalMap": "texture-packer-multi-atlas-0_n.png",
                     if (textures[i].normalMap) {
-                        var normalMap = new ($parcel$interopDefault($7Rbkr$phasersrcloaderfiletypesBinaryFile))(loader, key, textures[i].normalMap, textureXhrSettings);
+                        var normalMap = new $5Vb9O$phasersrcloaderfiletypesBinaryFile(loader, key, textures[i].normalMap, textureXhrSettings);
                         normalMap.type = 'normalMap';
                         image.setLink(normalMap);
                         this.addToMultiFile(normalMap);
@@ -553,10 +540,10 @@ var $537a5a4279d59773$export$2e2bcd8739ae039 = $537a5a4279d59773$var$PVRParser;
                 var image = this.files[0];
                 var json = this.files[1];
                 if (entry.type === 'PVR') {
-                    textureData = $537a5a4279d59773$export$2e2bcd8739ae039(image.data);
+                    textureData = $9da6bd3fe45b07d9$export$2e2bcd8739ae039(image.data);
                     console.log('pvr parsed data: ', textureData);
                 } else if (entry.type === 'KTX') {
-                    textureData = $b26d6f487989d19e$export$2e2bcd8739ae039(image.data);
+                    textureData = $8b581d90e03f5fd4$export$2e2bcd8739ae039(image.data);
                     console.log('ktx parsed data: ', textureData);
                 }
                 if (textureData && renderer.supportsCompressedTexture(entry.format, textureData.internalFormat)) {
@@ -592,8 +579,8 @@ var $537a5a4279d59773$export$2e2bcd8739ae039 = $537a5a4279d59773$var$PVRParser;
             for(var t = 0; t < json.data.textures.length; t++){
                 var item = json.data.textures[t];
                 if (item.image === key) {
-                    if (entry.type === 'PVR') textureData = $537a5a4279d59773$export$2e2bcd8739ae039(image);
-                    else if (entry.type === 'KTX') textureData = $b26d6f487989d19e$export$2e2bcd8739ae039(image);
+                    if (entry.type === 'PVR') textureData = $9da6bd3fe45b07d9$export$2e2bcd8739ae039(image);
+                    else if (entry.type === 'KTX') textureData = $8b581d90e03f5fd4$export$2e2bcd8739ae039(image);
                     if (textureData && renderer.supportsCompressedTexture(entry.format, textureData.internalFormat)) {
                         textureData.format = renderer.getCompressedTextureName(entry.format, textureData.internalFormat);
                         images.push(textureData);
@@ -609,7 +596,7 @@ var $537a5a4279d59773$export$2e2bcd8739ae039 = $537a5a4279d59773$var$PVRParser;
         this.complete = true;
     }
 });
-var $1376e04d92df3da4$export$2e2bcd8739ae039 = $1376e04d92df3da4$var$CompressedTextureFile;
+var $895fbc78e648d411$export$2e2bcd8739ae039 = $895fbc78e648d411$var$CompressedTextureFile;
 
 
 Phaser.Textures.TextureManager.prototype.addCompressedTexture = function(key, textureData, atlasData) {
@@ -618,10 +605,10 @@ Phaser.Textures.TextureManager.prototype.addCompressedTexture = function(key, te
         texture = this.create(key, textureData);
         texture.add('__BASE', 0, 0, 0, textureData.width, textureData.height);
         if (atlasData) {
-            if (Array.isArray(atlasData)) for(let i = 0; i < atlasData.length; i++)$7Rbkr$phasersrctexturesparsersJSONHash.JSONHash(texture, i, atlasData[i]);
-            else $7Rbkr$phasersrctexturesparsersJSONHash.JSONHash(texture, 0, atlasData);
+            if (Array.isArray(atlasData)) for(let i = 0; i < atlasData.length; i++)$5Vb9O$JSONHash(texture, i, atlasData[i]);
+            else $5Vb9O$JSONHash(texture, 0, atlasData);
         }
-        this.emit(($parcel$interopDefault($7Rbkr$phasersrctexturesevents)).ADD, key, texture);
+        this.emit($5Vb9O$phasersrctexturesevents.ADD, key, texture);
     }
     return texture;
 };
@@ -671,9 +658,9 @@ Phaser.Renderer.WebGL.WebGLRenderer.prototype.createTextureFromSource = function
     var texture = null;
     width = source ? source.width : width;
     height = source ? source.height : height;
-    var pow = ($parcel$interopDefault($7Rbkr$phasersrcmathpow2IsSizePowerOfTwo))(width, height);
+    var pow = $5Vb9O$phasersrcmathpow2IsSizePowerOfTwo(width, height);
     if (pow && !forceClamp) wrap = gl.REPEAT;
-    if (scaleMode === ($parcel$interopDefault($7Rbkr$phasersrcconst)).ScaleModes.LINEAR && this.config.antialias) {
+    if (scaleMode === $5Vb9O$phasersrcconst.ScaleModes.LINEAR && this.config.antialias) {
         minFilter = pow ? this.mipmapFilter : gl.LINEAR;
         magFilter = gl.LINEAR;
     }
@@ -702,7 +689,7 @@ Phaser.Renderer.WebGL.WebGLRenderer.prototype.createTexture2D = function(mipLeve
     var generateMipmap = false;
     if (pixels === null || pixels === undefined) {
         gl.texImage2D(gl.TEXTURE_2D, mipLevel, format, width, height, 0, format, gl.UNSIGNED_BYTE, null);
-        generateMipmap = ($parcel$interopDefault($7Rbkr$phasersrcmathpow2IsSizePowerOfTwo))(width, height);
+        generateMipmap = $5Vb9O$phasersrcmathpow2IsSizePowerOfTwo(width, height);
     } else if (pixels.compressed) {
         width = pixels.width;
         height = pixels.height;
@@ -714,7 +701,7 @@ Phaser.Renderer.WebGL.WebGLRenderer.prototype.createTexture2D = function(mipLeve
             height = pixels.height;
         }
         gl.texImage2D(gl.TEXTURE_2D, mipLevel, format, format, gl.UNSIGNED_BYTE, pixels);
-        generateMipmap = ($parcel$interopDefault($7Rbkr$phasersrcmathpow2IsSizePowerOfTwo))(width, height);
+        generateMipmap = $5Vb9O$phasersrcmathpow2IsSizePowerOfTwo(width, height);
     }
     if (generateMipmap) gl.generateMipmap(gl.TEXTURE_2D);
     this.setTexture2D(null, 0);
@@ -725,7 +712,7 @@ Phaser.Renderer.WebGL.WebGLRenderer.prototype.createTexture2D = function(mipLeve
     this.nativeTextures.push(texture);
     return texture;
 };
-class $6db036c6cbb638f8$export$2e2bcd8739ae039 extends Phaser.Plugins.BasePlugin {
+class $efb8d7a2e6f35ea6$export$2e2bcd8739ae039 extends Phaser.Plugins.BasePlugin {
     constructor(pluginManager){
         super(pluginManager);
     }
@@ -734,10 +721,10 @@ class $6db036c6cbb638f8$export$2e2bcd8739ae039 extends Phaser.Plugins.BasePlugin
         else if (Number(Phaser.VERSION.split('.')[1]) !== 24) throw new Error('Phaser compressed texture plugin was made specifically for use with Phaser v3.24.1. Proceed with caution.');
         // not sure how else to do this =/
         this.game.renderer.compression = Phaser.Renderer.WebGL.WebGLRenderer.prototype.getCompressedTextures.call(this.game.renderer);
-        this.pluginManager.registerFileType('texture', $6db036c6cbb638f8$var$compressedTextureLoaderCallback);
+        this.pluginManager.registerFileType('texture', $efb8d7a2e6f35ea6$var$compressedTextureLoaderCallback);
     }
     addToScene(scene) {
-        scene.sys.load['texture'] = $6db036c6cbb638f8$var$compressedTextureLoaderCallback;
+        scene.sys.load['texture'] = $efb8d7a2e6f35ea6$var$compressedTextureLoaderCallback;
     }
 }
 /**
@@ -830,7 +817,7 @@ class $6db036c6cbb638f8$export$2e2bcd8739ae039 extends Phaser.Plugins.BasePlugin
  * @param {Phaser.Types.Loader.XHRSettingsObject} [xhrSettings] - An XHR Settings configuration object. Used in replacement of the Loaders default XHR Settings.
  *
  * @return {this} The Loader instance.
- */ function $6db036c6cbb638f8$var$compressedTextureLoaderCallback(key1, url, xhrSettings1) {
+ */ function $efb8d7a2e6f35ea6$var$compressedTextureLoaderCallback(key1, url, xhrSettings1) {
     const renderer = this.systems.renderer;
     const AddEntry = function(loader, key, urls, xhrSettings) {
         console.log('AddEntry()');
@@ -843,10 +830,10 @@ class $6db036c6cbb638f8$export$2e2bcd8739ae039 extends Phaser.Plugins.BasePlugin
             multiPath: undefined,
             multiBaseURL: undefined
         };
-        if (($parcel$interopDefault($7Rbkr$phasersrcutilsobjectIsPlainObject))(key)) {
+        if ($5Vb9O$phasersrcutilsobjectIsPlainObject(key)) {
             const config = key;
-            key = ($parcel$interopDefault($7Rbkr$phasersrcutilsobjectGetFastValue))(config, 'key');
-            urls = ($parcel$interopDefault($7Rbkr$phasersrcutilsobjectGetFastValue))(config, 'url'), xhrSettings = ($parcel$interopDefault($7Rbkr$phasersrcutilsobjectGetFastValue))(config, 'xhrSettings');
+            key = $5Vb9O$phasersrcutilsobjectGetFastValue(config, 'key');
+            urls = $5Vb9O$phasersrcutilsobjectGetFastValue(config, 'url'), xhrSettings = $5Vb9O$phasersrcutilsobjectGetFastValue(config, 'xhrSettings');
         }
         let matched = false;
         for(let textureBaseFormat in urls){
@@ -856,7 +843,7 @@ class $6db036c6cbb638f8$export$2e2bcd8739ae039 extends Phaser.Plugins.BasePlugin
             if (renderer.supportsCompressedTexture(textureBaseFormat)) {
                 const urlEntry = urls[textureBaseFormat];
                 if (typeof urlEntry === 'string') entry.textureURL = urlEntry;
-                else entry = ($parcel$interopDefault($7Rbkr$phasersrcutilsobjectMerge))(urlEntry, entry);
+                else entry = $5Vb9O$phasersrcutilsobjectMerge(urlEntry, entry);
                 entry.format = textureBaseFormat.toUpperCase();
                 matched = true;
                 break;
@@ -866,14 +853,14 @@ class $6db036c6cbb638f8$export$2e2bcd8739ae039 extends Phaser.Plugins.BasePlugin
         else if (entry.format === 'IMG') {
             let multifile;
             if (entry.multiAtlasURL) {
-                multifile = new ($parcel$interopDefault($7Rbkr$phasersrcloaderfiletypesMultiAtlasFile))(this, key, entry.multiAtlasURL, entry.multiPath, entry.multiBaseURL, xhrSettings);
+                multifile = new $5Vb9O$phasersrcloaderfiletypesMultiAtlasFile(this, key, entry.multiAtlasURL, entry.multiPath, entry.multiBaseURL, xhrSettings);
                 loader.addFile(multifile.files);
             } else if (entry.atlasURL) {
-                multifile = new ($parcel$interopDefault($7Rbkr$phasersrcloaderfiletypesAtlasJSONFile))(loader, key, entry.textureURL, entry.atlasURL, xhrSettings);
+                multifile = new $5Vb9O$phasersrcloaderfiletypesAtlasJSONFile(loader, key, entry.textureURL, entry.atlasURL, xhrSettings);
                 loader.addFile(multifile.files);
-            } else loader.addFile(new ($parcel$interopDefault($7Rbkr$phasersrcloaderfiletypesImageFile))(loader, key, entry.textureURL, xhrSettings));
+            } else loader.addFile(new $5Vb9O$phasersrcloaderfiletypesImageFile(loader, key, entry.textureURL, xhrSettings));
         } else {
-            const texture = new $1376e04d92df3da4$export$2e2bcd8739ae039(loader, key, entry, xhrSettings);
+            const texture = new $895fbc78e648d411$export$2e2bcd8739ae039(loader, key, entry, xhrSettings);
             loader.addFile(texture.files);
         }
     };
@@ -883,4 +870,5 @@ class $6db036c6cbb638f8$export$2e2bcd8739ae039 extends Phaser.Plugins.BasePlugin
 }
 
 
-//# sourceMappingURL=CompressedTexturePlugin.js.map
+export {$efb8d7a2e6f35ea6$export$2e2bcd8739ae039 as default};
+//# sourceMappingURL=CompressedTexturePlugin.esm.js.map

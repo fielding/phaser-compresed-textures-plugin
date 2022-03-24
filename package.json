@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Phaser 3 Compressed Texture Plugin",
   "source": "src/CompressedTexturePlugin.ts",
-  "module": "dist/CompressedTexturePlugin.js",
+  "main": "dist/CompressedTexturePlugin.js",
+  "module": "dist/CompressedTexturePlugin.esm.js",
   "scripts": {
     "dev": "parcel watch",
     "build": "parcel build"
@@ -16,5 +17,21 @@
   "devDependencies": {
     "@parcel/transformer-typescript-types": "^2.4.0",
     "typescript": "^4.6.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fielding/phaser-compresed-textures-plugin.git"
+  },
+  "keywords": [
+    "phaser",
+    "phaser-plugin",
+    "phaser3",
+    "phaser3-plugin",
+    "compressed textures"
+  ],
+  "author": "Fielding Johnston",
+  "bugs": {
+    "url": "https://github.com/fielding/phaser-compresed-textures-plugin/issues"
+  },
+  "homepage": "https://github.com/fielding/phaser-compresed-textures-plugin#readme"
 }
