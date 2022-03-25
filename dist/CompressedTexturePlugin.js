@@ -1,17 +1,17 @@
-var $7Rbkr$phasersrcloaderfiletypesAtlasJSONFile = require("phaser/src/loader/filetypes/AtlasJSONFile");
-var $7Rbkr$phasersrctexturesparsersJSONHash = require("phaser/src/textures/parsers/JSONHash");
-var $7Rbkr$phasersrctexturesevents = require("phaser/src/textures/events");
-var $7Rbkr$phasersrcutilsobjectMerge = require("phaser/src/utils/object/Merge");
-var $7Rbkr$phasersrcloaderfiletypesImageFile = require("phaser/src/loader/filetypes/ImageFile");
-var $7Rbkr$phasersrcutilsobjectIsPlainObject = require("phaser/src/utils/object/IsPlainObject");
-var $7Rbkr$phasersrcutilsobjectGetFastValue = require("phaser/src/utils/object/GetFastValue");
-var $7Rbkr$phasersrcloaderfiletypesMultiAtlasFile = require("phaser/src/loader/filetypes/MultiAtlasFile");
-var $7Rbkr$phasersrcmathpow2IsSizePowerOfTwo = require("phaser/src/math/pow2/IsSizePowerOfTwo");
-var $7Rbkr$phasersrcconst = require("phaser/src/const");
-var $7Rbkr$phasersrcloaderfiletypesBinaryFile = require("phaser/src/loader/filetypes/BinaryFile");
-var $7Rbkr$phasersrcutilsClass = require("phaser/src/utils/Class");
-var $7Rbkr$phasersrcloaderfiletypesJSONFile = require("phaser/src/loader/filetypes/JSONFile");
-var $7Rbkr$phasersrcloaderMultiFile = require("phaser/src/loader/MultiFile");
+var $6PZGQ$phasersrcloaderfiletypesAtlasJSONFile = require("phaser/src/loader/filetypes/AtlasJSONFile");
+var $6PZGQ$phasersrctexturesparsersJSONHash = require("phaser/src/textures/parsers/JSONHash");
+var $6PZGQ$phasersrctexturesevents = require("phaser/src/textures/events");
+var $6PZGQ$phasersrcutilsobjectMerge = require("phaser/src/utils/object/Merge");
+var $6PZGQ$phasersrcloaderfiletypesImageFile = require("phaser/src/loader/filetypes/ImageFile");
+var $6PZGQ$phasersrcutilsobjectIsPlainObject = require("phaser/src/utils/object/IsPlainObject");
+var $6PZGQ$phasersrcutilsobjectGetFastValue = require("phaser/src/utils/object/GetFastValue");
+var $6PZGQ$phasersrcloaderfiletypesMultiAtlasFile = require("phaser/src/loader/filetypes/MultiAtlasFile");
+var $6PZGQ$phasersrcmathpow2IsSizePowerOfTwo = require("phaser/src/math/pow2/IsSizePowerOfTwo");
+var $6PZGQ$phasersrcconst = require("phaser/src/const");
+var $6PZGQ$phasersrcloaderfiletypesBinaryFile = require("phaser/src/loader/filetypes/BinaryFile");
+var $6PZGQ$phasersrcutilsClass = require("phaser/src/utils/Class");
+var $6PZGQ$phasersrcloaderfiletypesJSONFile = require("phaser/src/loader/filetypes/JSONFile");
+var $6PZGQ$phasersrcloaderMultiFile = require("phaser/src/loader/MultiFile");
 
 function $parcel$interopDefault(a) {
   return a && a.__esModule ? a.default : a;
@@ -25,7 +25,7 @@ function $parcel$export(e, n, v, s) {
 
 $parcel$defineInteropFlag(module.exports);
 
-$parcel$export(module.exports, "default", () => $6db036c6cbb638f8$export$2e2bcd8739ae039);
+$parcel$export(module.exports, "default", () => $5edd43142d19b380$export$2e2bcd8739ae039);
 
 
 
@@ -50,7 +50,6 @@ $parcel$export(module.exports, "default", () => $6db036c6cbb638f8$export$2e2bcd8
  *
  * @function Phaser.Textures.Parsers.KTXParser
  * @memberof Phaser.Textures.Parsers
- * @since 3.60.0
  *
  * @param {ArrayBuffer} data - The data object created by the Compressed Texture File Loader.
  *
@@ -369,7 +368,6 @@ var $b26d6f487989d19e$export$2e2bcd8739ae039 = $b26d6f487989d19e$var$KTXParser;
  *
  * @function Phaser.Textures.Parsers.PVRParser
  * @memberof Phaser.Textures.Parsers
- * @since 3.60.0
  *
  * @param {ArrayBuffer} data - The data object created by the Compressed Texture File Loader.
  *
@@ -428,59 +426,46 @@ var $537a5a4279d59773$export$2e2bcd8739ae039 = $537a5a4279d59773$var$PVRParser;
  * @extends Phaser.Loader.MultiFile
  * @memberof Phaser.Loader.FileTypes
  * @constructor
- * @since 3.60.0
  *
  * @param {Phaser.Loader.LoaderPlugin} loader - A reference to the Loader that is responsible for this file.
  * @param {string} key - The key to use for this file.
  * @param {Phaser.Types.Loader.FileTypes.CompressedTextureFileEntry} entry - The compressed texture file entry to load.
  * @param {Phaser.Types.Loader.XHRSettingsObject} [xhrSettings] - Extra XHR Settings specifically for this file.
- */ var $1376e04d92df3da4$var$CompressedTextureFile = new ($parcel$interopDefault($7Rbkr$phasersrcutilsClass))({
-    Extends: ($parcel$interopDefault($7Rbkr$phasersrcloaderMultiFile)),
+ */ var $1376e04d92df3da4$var$CompressedTextureFile = new ($parcel$interopDefault($6PZGQ$phasersrcutilsClass))({
+    Extends: ($parcel$interopDefault($6PZGQ$phasersrcloaderMultiFile)),
     initialize: function CompressedTextureFile(loader, key, entry, xhrSettings) {
-        console.log('CompressedTextureFile()::ctor', {
-            loader: loader,
-            key: key,
-            entry: entry,
-            xhrSettings: xhrSettings
-        });
         if (entry.multiAtlasURL) {
-            var multi = new ($parcel$interopDefault($7Rbkr$phasersrcloaderfiletypesJSONFile))(loader, {
+            var multi = new ($parcel$interopDefault($6PZGQ$phasersrcloaderfiletypesJSONFile))(loader, {
                 key: key,
                 url: entry.multiAtlasURL,
                 xhrSettings: xhrSettings,
                 config: entry
             });
-            ($parcel$interopDefault($7Rbkr$phasersrcloaderMultiFile)).call(this, loader, 'texture', key, [
+            ($parcel$interopDefault($6PZGQ$phasersrcloaderMultiFile)).call(this, loader, 'texture', key, [
                 multi
             ]);
         } else {
             var extension = entry.textureURL.substr(entry.textureURL.length - 3);
-            console.log({
-                extension: extension
-            });
             if (!entry.type) entry.type = extension.toLowerCase() === 'ktx' ? 'KTX' : 'PVR';
-            var image = new ($parcel$interopDefault($7Rbkr$phasersrcloaderfiletypesBinaryFile))(loader, {
+            var image = new ($parcel$interopDefault($6PZGQ$phasersrcloaderfiletypesBinaryFile))(loader, {
                 key: key,
                 url: entry.textureURL,
                 extension: extension,
                 xhrSettings: xhrSettings,
                 config: entry
             });
-            console.log({
-                image: image
-            });
             if (entry.atlasURL) {
-                var data = new ($parcel$interopDefault($7Rbkr$phasersrcloaderfiletypesJSONFile))(loader, {
+                var data = new ($parcel$interopDefault($6PZGQ$phasersrcloaderfiletypesJSONFile))(loader, {
                     key: key,
                     url: entry.atlasURL,
                     xhrSettings: xhrSettings,
                     config: entry
                 });
-                ($parcel$interopDefault($7Rbkr$phasersrcloaderMultiFile)).call(this, loader, 'texture', key, [
+                ($parcel$interopDefault($6PZGQ$phasersrcloaderMultiFile)).call(this, loader, 'texture', key, [
                     image,
                     data
                 ]);
-            } else ($parcel$interopDefault($7Rbkr$phasersrcloaderMultiFile)).call(this, loader, 'texture', key, [
+            } else ($parcel$interopDefault($6PZGQ$phasersrcloaderMultiFile)).call(this, loader, 'texture', key, [
                 image
             ]);
         }
@@ -490,7 +475,6 @@ var $537a5a4279d59773$export$2e2bcd8739ae039 = $537a5a4279d59773$var$PVRParser;
    * Called by each File when it finishes loading.
    *
    * @method Phaser.Loader.FileTypes.CompressedTextureFile#onFileComplete
-   * @since 3.60.0
    *
    * @param {Phaser.Loader.File} file - The File that has completed processing.
    */ onFileComplete: function(file) {
@@ -506,10 +490,10 @@ var $537a5a4279d59773$export$2e2bcd8739ae039 = $537a5a4279d59773$var$PVRParser;
                 var currentBaseURL = loader.baseURL;
                 var currentPath = loader.path;
                 var currentPrefix = loader.prefix;
-                var baseURL = ($parcel$interopDefault($7Rbkr$phasersrcutilsobjectGetFastValue))(config, 'multiBaseURL', this.baseURL);
-                var path = ($parcel$interopDefault($7Rbkr$phasersrcutilsobjectGetFastValue))(config, 'multiPath', this.path);
-                var prefix = ($parcel$interopDefault($7Rbkr$phasersrcutilsobjectGetFastValue))(config, 'prefix', this.prefix);
-                var textureXhrSettings = ($parcel$interopDefault($7Rbkr$phasersrcutilsobjectGetFastValue))(config, 'textureXhrSettings');
+                var baseURL = ($parcel$interopDefault($6PZGQ$phasersrcutilsobjectGetFastValue))(config, 'multiBaseURL', this.baseURL);
+                var path = ($parcel$interopDefault($6PZGQ$phasersrcutilsobjectGetFastValue))(config, 'multiPath', this.path);
+                var prefix = ($parcel$interopDefault($6PZGQ$phasersrcutilsobjectGetFastValue))(config, 'prefix', this.prefix);
+                var textureXhrSettings = ($parcel$interopDefault($6PZGQ$phasersrcutilsobjectGetFastValue))(config, 'textureXhrSettings');
                 if (baseURL) loader.setBaseURL(baseURL);
                 if (path) loader.setPath(path);
                 if (prefix) loader.setPrefix(prefix);
@@ -517,12 +501,12 @@ var $537a5a4279d59773$export$2e2bcd8739ae039 = $537a5a4279d59773$var$PVRParser;
                     //  "image": "texture-packer-multi-atlas-0.png",
                     var textureURL = textures[i].image;
                     var key = 'CMA' + this.multiKeyIndex + '_' + textureURL;
-                    var image = new ($parcel$interopDefault($7Rbkr$phasersrcloaderfiletypesBinaryFile))(loader, key, textureURL, textureXhrSettings);
+                    var image = new ($parcel$interopDefault($6PZGQ$phasersrcloaderfiletypesBinaryFile))(loader, key, textureURL, textureXhrSettings);
                     this.addToMultiFile(image);
                     loader.addFile(image);
                     //  "normalMap": "texture-packer-multi-atlas-0_n.png",
                     if (textures[i].normalMap) {
-                        var normalMap = new ($parcel$interopDefault($7Rbkr$phasersrcloaderfiletypesBinaryFile))(loader, key, textures[i].normalMap, textureXhrSettings);
+                        var normalMap = new ($parcel$interopDefault($6PZGQ$phasersrcloaderfiletypesBinaryFile))(loader, key, textures[i].normalMap, textureXhrSettings);
                         normalMap.type = 'normalMap';
                         image.setLink(normalMap);
                         this.addToMultiFile(normalMap);
@@ -540,9 +524,7 @@ var $537a5a4279d59773$export$2e2bcd8739ae039 = $537a5a4279d59773$var$PVRParser;
    * Adds this file to its target cache upon successful loading and processing.
    *
    * @method Phaser.Loader.FileTypes.CompressedTextureFile#addToCache
-   * @since 3.60.0
    */ addToCache: function() {
-        console.log('addToCache()');
         if (this.isReadyToProcess()) {
             var entry = this.config;
             if (entry.multiAtlasURL) this.addMultiToCache();
@@ -552,13 +534,8 @@ var $537a5a4279d59773$export$2e2bcd8739ae039 = $537a5a4279d59773$var$PVRParser;
                 var textureData;
                 var image = this.files[0];
                 var json = this.files[1];
-                if (entry.type === 'PVR') {
-                    textureData = $537a5a4279d59773$export$2e2bcd8739ae039(image.data);
-                    console.log('pvr parsed data: ', textureData);
-                } else if (entry.type === 'KTX') {
-                    textureData = $b26d6f487989d19e$export$2e2bcd8739ae039(image.data);
-                    console.log('ktx parsed data: ', textureData);
-                }
+                if (entry.type === 'PVR') textureData = $537a5a4279d59773$export$2e2bcd8739ae039(image.data);
+                else if (entry.type === 'KTX') textureData = $b26d6f487989d19e$export$2e2bcd8739ae039(image.data);
                 if (textureData && renderer.supportsCompressedTexture(entry.format, textureData.internalFormat)) {
                     textureData.format = renderer.getCompressedTextureName(entry.format, textureData.internalFormat);
                     var atlasData = json && json.data ? json.data : null;
@@ -572,7 +549,6 @@ var $537a5a4279d59773$export$2e2bcd8739ae039 = $537a5a4279d59773$var$PVRParser;
    * Adds all of the multi-file entties to their target caches upon successful loading and processing.
    *
    * @method Phaser.Loader.FileTypes.CompressedTextureFile#addMultiToCache
-   * @since 3.60.0
    */ addMultiToCache: function() {
         var entry = this.config;
         var json = this.files[0];
@@ -612,20 +588,46 @@ var $537a5a4279d59773$export$2e2bcd8739ae039 = $537a5a4279d59773$var$PVRParser;
 var $1376e04d92df3da4$export$2e2bcd8739ae039 = $1376e04d92df3da4$var$CompressedTextureFile;
 
 
-Phaser.Textures.TextureManager.prototype.addCompressedTexture = function(key, textureData, atlasData) {
+/**
+ * Adds a Compressed Texture to this Texture Manager.
+ *
+ * The texture should typically have been loaded via the `CompressedTextureFile` loader,
+ * in order to prepare the correct data object this method requires.
+ *
+ * You can optionally also pass atlas data to this method, in which case a texture atlas
+ * will be generated from the given compressed texture, combined with the atlas data.
+ *
+ * @method Phaser.Textures.TextureManager#addCompressedTexture
+ * @fires Phaser.Textures.Events#ADD
+ *
+ * @param {string} key - The unique string-based key of the Texture.
+ * @param {Phaser.Types.Textures.CompressedTextureData} textureData - The Compressed Texture data object.
+ * @param {object} [atlasData] - Optional Texture Atlas data.
+ *
+ * @return {?Phaser.Textures.Texture} The Texture that was created, or `null` if the key is already in use.
+ */ Phaser.Textures.TextureManager.prototype.addCompressedTexture = function(key, textureData, atlasData) {
     let texture = null;
     if (this.checkKey(key)) {
         texture = this.create(key, textureData);
         texture.add('__BASE', 0, 0, 0, textureData.width, textureData.height);
         if (atlasData) {
-            if (Array.isArray(atlasData)) for(let i = 0; i < atlasData.length; i++)$7Rbkr$phasersrctexturesparsersJSONHash.JSONHash(texture, i, atlasData[i]);
-            else $7Rbkr$phasersrctexturesparsersJSONHash.JSONHash(texture, 0, atlasData);
+            if (Array.isArray(atlasData)) for(let i = 0; i < atlasData.length; i++)$6PZGQ$phasersrctexturesparsersJSONHash.JSONHash(texture, i, atlasData[i]);
+            else $6PZGQ$phasersrctexturesparsersJSONHash.JSONHash(texture, 0, atlasData);
         }
-        this.emit(($parcel$interopDefault($7Rbkr$phasersrctexturesevents)).ADD, key, texture);
+        this.emit(($parcel$interopDefault($6PZGQ$phasersrctexturesevents)).ADD, key, texture);
     }
     return texture;
 };
-Phaser.Renderer.WebGL.WebGLRenderer.prototype.getCompressedTextures = function() {
+/**
+ * Determines which compressed texture formats this browser and device supports.
+ *
+ * Called automatically as part of the WebGL Renderer init process. If you need to investigate
+ * which formats it supports, see the `Phaser.Renderer.WebGL.WebGLRenderer#compression` property instead.
+ *
+ * @method Phaser.Renderer.WebGL.WebGLRenderer#getCompressedTextures
+ *
+ * @return {Phaser.Types.Renderer.WebGL.WebGLTextureCompression} The compression object.
+ */ Phaser.Renderer.WebGL.WebGLRenderer.prototype.getCompressedTextures = function() {
     const extString = 'WEBGL_compressed_texture_';
     const wkExtString = 'WEBKIT_' + extString;
     const hasExt = function(gl, format) {
@@ -650,7 +652,16 @@ Phaser.Renderer.WebGL.WebGLRenderer.prototype.getCompressedTextures = function()
         IMG: true
     };
 };
-Phaser.Renderer.WebGL.WebGLRenderer.prototype.supportsCompressedTexture = function(baseFormat, format) {
+/**
+ * Checks if the given compressed texture format is supported, or not.
+ *
+ * @method Phaser.Renderer.WebGL.WebGLRenderer#supportsCompressedTexture
+ *
+ * @param {string} baseFormat - The Base Format to check.
+ * @param {GLenum} [format] - An optional GLenum format to check within the base format.
+ *
+ * @return {boolean} True if the format is supported, otherwise false.
+ */ Phaser.Renderer.WebGL.WebGLRenderer.prototype.supportsCompressedTexture = function(baseFormat, format) {
     const supportedFormats = this.compression[baseFormat.toUpperCase()];
     if (supportedFormats) {
         if (format) return format in supportedFormats;
@@ -658,11 +669,32 @@ Phaser.Renderer.WebGL.WebGLRenderer.prototype.supportsCompressedTexture = functi
     }
     return false;
 };
-Phaser.Renderer.WebGL.WebGLRenderer.prototype.getCompressedTextureName = function(baseFormat, format) {
+/**
+ * Returns a compressed texture format GLenum name based on the given format.
+ *
+ * @method Phaser.Renderer.WebGL.WebGLRenderer#getCompressedTextureName
+ *
+ * @param {string} baseFormat - The Base Format to check.
+ * @param {GLenum} [format] - An optional GLenum format to check within the base format.
+ *
+ * @return {string} The compressed texture format name, as a string.
+ */ Phaser.Renderer.WebGL.WebGLRenderer.prototype.getCompressedTextureName = function(baseFormat, format) {
     const supportedFormats = this.compression[baseFormat.toUpperCase()];
     if (format in supportedFormats) return supportedFormats[format];
 };
-Phaser.Renderer.WebGL.WebGLRenderer.prototype.createTextureFromSource = function(source, width, height, scaleMode, forceClamp) {
+/**
+ * Creates a texture from an image source. If the source is not valid it creates an empty texture.
+ *
+ * @method Phaser.Renderer.WebGL.WebGLRenderer#createTextureFromSource
+ *
+ * @param {object} source - The source of the texture.
+ * @param {number} width - The width of the texture.
+ * @param {number} height - The height of the texture.
+ * @param {number} scaleMode - The scale mode to be used by the texture.
+ * @param {boolean} [forceClamp=false] - Force the texture to use the CLAMP_TO_EDGE wrap mode, even if a power of two?
+ *
+ * @return {?WebGLTexture} The WebGL Texture that was created, or `null` if it couldn't be created.
+ */ Phaser.Renderer.WebGL.WebGLRenderer.prototype.createTextureFromSource = function(source, width, height, scaleMode, forceClamp) {
     if (forceClamp === undefined) forceClamp = false;
     var gl = this.gl;
     var minFilter = gl.NEAREST;
@@ -671,9 +703,9 @@ Phaser.Renderer.WebGL.WebGLRenderer.prototype.createTextureFromSource = function
     var texture = null;
     width = source ? source.width : width;
     height = source ? source.height : height;
-    var pow = ($parcel$interopDefault($7Rbkr$phasersrcmathpow2IsSizePowerOfTwo))(width, height);
+    var pow = ($parcel$interopDefault($6PZGQ$phasersrcmathpow2IsSizePowerOfTwo))(width, height);
     if (pow && !forceClamp) wrap = gl.REPEAT;
-    if (scaleMode === ($parcel$interopDefault($7Rbkr$phasersrcconst)).ScaleModes.LINEAR && this.config.antialias) {
+    if (scaleMode === ($parcel$interopDefault($6PZGQ$phasersrcconst)).ScaleModes.LINEAR && this.config.antialias) {
         minFilter = pow ? this.mipmapFilter : gl.LINEAR;
         magFilter = gl.LINEAR;
     }
@@ -686,7 +718,26 @@ Phaser.Renderer.WebGL.WebGLRenderer.prototype.createTextureFromSource = function
     else texture = this.createTexture2D(0, minFilter, magFilter, wrap, wrap, gl.RGBA, source);
     return texture;
 };
-Phaser.Renderer.WebGL.WebGLRenderer.prototype.createTexture2D = function(mipLevel, minFilter, magFilter, wrapT, wrapS, format, pixels, width, height, pma, forceSize, flipY) {
+/**
+ * A wrapper for creating a WebGLTexture. If no pixel data is passed it will create an empty texture.
+ *
+ * @method Phaser.Renderer.WebGL.WebGLRenderer#createTexture2D
+ *
+ * @param {number} mipLevel - Mip level of the texture.
+ * @param {number} minFilter - Filtering of the texture.
+ * @param {number} magFilter - Filtering of the texture.
+ * @param {number} wrapT - Wrapping mode of the texture.
+ * @param {number} wrapS - Wrapping mode of the texture.
+ * @param {number} format - Which format does the texture use.
+ * @param {?object} pixels - pixel data.
+ * @param {number} width - Width of the texture in pixels.
+ * @param {number} height - Height of the texture in pixels.
+ * @param {boolean} [pma=true] - Does the texture have premultiplied alpha?
+ * @param {boolean} [forceSize=false] - If `true` it will use the width and height passed to this method, regardless of the pixels dimension.
+ * @param {boolean} [flipY=false] - Sets the `UNPACK_FLIP_Y_WEBGL` flag the WebGL Texture uses during upload.
+ *
+ * @return {WebGLTexture} The WebGLTexture that was created.
+ */ Phaser.Renderer.WebGL.WebGLRenderer.prototype.createTexture2D = function(mipLevel, minFilter, magFilter, wrapT, wrapS, format, pixels, width, height, pma, forceSize, flipY) {
     pma = pma === undefined || pma === null ? true : pma;
     if (forceSize === undefined) forceSize = false;
     if (flipY === undefined) flipY = false;
@@ -702,7 +753,7 @@ Phaser.Renderer.WebGL.WebGLRenderer.prototype.createTexture2D = function(mipLeve
     var generateMipmap = false;
     if (pixels === null || pixels === undefined) {
         gl.texImage2D(gl.TEXTURE_2D, mipLevel, format, width, height, 0, format, gl.UNSIGNED_BYTE, null);
-        generateMipmap = ($parcel$interopDefault($7Rbkr$phasersrcmathpow2IsSizePowerOfTwo))(width, height);
+        generateMipmap = ($parcel$interopDefault($6PZGQ$phasersrcmathpow2IsSizePowerOfTwo))(width, height);
     } else if (pixels.compressed) {
         width = pixels.width;
         height = pixels.height;
@@ -714,7 +765,7 @@ Phaser.Renderer.WebGL.WebGLRenderer.prototype.createTexture2D = function(mipLeve
             height = pixels.height;
         }
         gl.texImage2D(gl.TEXTURE_2D, mipLevel, format, format, gl.UNSIGNED_BYTE, pixels);
-        generateMipmap = ($parcel$interopDefault($7Rbkr$phasersrcmathpow2IsSizePowerOfTwo))(width, height);
+        generateMipmap = ($parcel$interopDefault($6PZGQ$phasersrcmathpow2IsSizePowerOfTwo))(width, height);
     }
     if (generateMipmap) gl.generateMipmap(gl.TEXTURE_2D);
     this.setTexture2D(null, 0);
@@ -725,7 +776,7 @@ Phaser.Renderer.WebGL.WebGLRenderer.prototype.createTexture2D = function(mipLeve
     this.nativeTextures.push(texture);
     return texture;
 };
-class $6db036c6cbb638f8$export$2e2bcd8739ae039 extends Phaser.Plugins.BasePlugin {
+class $5edd43142d19b380$export$2e2bcd8739ae039 extends Phaser.Plugins.BasePlugin {
     constructor(pluginManager){
         super(pluginManager);
     }
@@ -734,37 +785,91 @@ class $6db036c6cbb638f8$export$2e2bcd8739ae039 extends Phaser.Plugins.BasePlugin
         else if (Number(Phaser.VERSION.split('.')[1]) !== 24) throw new Error('Phaser compressed texture plugin was made specifically for use with Phaser v3.24.1. Proceed with caution.');
         // not sure how else to do this =/
         this.game.renderer.compression = Phaser.Renderer.WebGL.WebGLRenderer.prototype.getCompressedTextures.call(this.game.renderer);
-        this.pluginManager.registerFileType('texture', $6db036c6cbb638f8$var$compressedTextureLoaderCallback);
+        this.pluginManager.registerFileType('texture', $5edd43142d19b380$var$compressedTextureLoaderCallback);
     }
     addToScene(scene) {
-        scene.sys.load['texture'] = $6db036c6cbb638f8$var$compressedTextureLoaderCallback;
+        scene.sys.load['texture'] = $5edd43142d19b380$var$compressedTextureLoaderCallback;
     }
 }
 /**
  * Adds a Compressed Texture file to the current load queue. This feature is WebGL only.
  *
- * This method takes a key and a configuration object, which lists the different formats and files that map to them.
+ * This method takes a key and a configuration object, which lists the different formats
+ * and files associated with them.
  *
- * The texture format object should be ordered in GPU priority order, with IMG last.
+ * The texture format object should be ordered in GPU priority order, with IMG as the last entry.
  *
  * You can call this method from within your Scene's `preload`, along with any other files you wish to load:
  *
  * ```javascript
- * function preload ()
+ * preload ()
  * {
- *     this.load.texture('pic', {
+ *     this.load.texture('yourPic', {
  *         ASTC: { type: 'PVR', textureURL: 'pic-astc-4x4.pvr' },
  *         PVRTC: { type: 'PVR', textureURL: 'pic-pvrtc-4bpp-rgba.pvr' },
  *         S3TC: { type: 'PVR', textureURL: 'pic-dxt5.pvr' },
- *         IMG: { textureURL: 'pic.png }
+ *         IMG: { textureURL: 'pic.png' }
  *     });
-`
+ * ```
+ *
+ * If you wish to load a texture atlas, provide the `atlasURL` property:
+ *
+ * ```javascript
+ * preload ()
+ * {
+ *     const path = 'assets/compressed';
+ *
+ *     this.load.texture('yourAtlas', {
+ *         'ASTC': { type: 'PVR', textureURL: `${path}/textures-astc-4x4.pvr`, atlasURL: `${path}/textures.json` },
+ *         'PVRTC': { type: 'PVR', textureURL: `${path}/textures-pvrtc-4bpp-rgba.pvr`, atlasURL: `${path}/textures-pvrtc-4bpp-rgba.json` },
+ *         'S3TC': { type: 'PVR', textureURL: `${path}/textures-dxt5.pvr`, atlasURL: `${path}/textures-dxt5.json` },
+ *         'IMG': { textureURL: `${path}/textures.png`, atlasURL: `${path}/textures.json` }
+ *     });
+ * }
+ * ```
+ *
+ * If you wish to load a Multi Atlas, as exported from Texture Packer Pro, use the `multiAtlasURL` property instead:
+ *
+ * ```javascript
+ * preload ()
+ * {
+ *     const path = 'assets/compressed';
+ *
+ *     this.load.texture('yourAtlas', {
+ *         'ASTC': { type: 'PVR', atlasURL: `${path}/textures.json` },
+ *         'PVRTC': { type: 'PVR', atlasURL: `${path}/textures-pvrtc-4bpp-rgba.json` },
+ *         'S3TC': { type: 'PVR', atlasURL: `${path}/textures-dxt5.json` },
+ *         'IMG': { atlasURL: `${path}/textures.json` }
+ *     });
+ * }
+ * ```
+ *
+ * When loading a Multi Atlas you do not need to specify the `textureURL` property as it will be read from the JSON file.
+ *
+ * Instead of passing arguments you can pass a configuration object, such as:
+ *
+ * ```javascript
+ * this.load.texture({
+ *     key: 'yourPic',
+ *     url: {
+ *         ASTC: { type: 'PVR', textureURL: 'pic-astc-4x4.pvr' },
+ *         PVRTC: { type: 'PVR', textureURL: 'pic-pvrtc-4bpp-rgba.pvr' },
+ *         S3TC: { type: 'PVR', textureURL: 'pic-dxt5.pvr' },
+ *         IMG: { textureURL: 'pic.png' }
+ *    }
+ * });
+ * ```
+ *
+ * See the documentation for `Phaser.Types.Loader.FileTypes.CompressedTextureFileConfig` for more details.
+ *
+ * The number of formats you provide to this function is up to you, but you should ensure you
+ * cover the primary platforms where appropriate.
  *
  * The 'IMG' entry is a fallback to a JPG or PNG, should the browser be unable to load any of the other
- * formats presented to this function.
+ * formats presented to this function. You should really always include this, although it is optional.
  *
- * Phas *
- * Within those, it can parse the following texture compression formats:
+ * Phaser supports loading both the PVR and KTX container formats. Within those, it can parse
+ * the following texture compression formats:
  *
  * ETC
  * ETC1
@@ -776,14 +881,20 @@ class $6db036c6cbb638f8$export$2e2bcd8739ae039 extends Phaser.Plugins.BasePlugin
  * S3TC
  * S3TCSRGB
  *
+ * For more information about the benefits of compressed textures please see the
+ * following articles:
+ *
+ * Texture Compression in 2020 (https://aras-p.info/blog/2020/12/08/Texture-Compression-in-2020/)
+ * Compressed GPU Texture Formats (https://themaister.net/blog/2020/08/12/compressed-gpu-texture-formats-a-review-and-compute-shader-decoders-part-1/)
+ *
  * To create compressed texture files use a 3rd party application such as:
  *
  * Texture Packer (https://www.codeandweb.com/texturepacker/tutorials/how-to-create-sprite-sheets-for-phaser3?utm_source=ad&utm_medium=banner&utm_campaign=phaser-2018-10-16)
  * PVRTexTool (https://developer.imaginationtech.com/pvrtextool/) - available for Windows, macOS and Linux.
- * Mail Texture Compression Tool (https://developer.arm.com/tools-and-software/graphics-and-gaming/mali-texture-compression-tool)
+ * Mali Texture Compression Tool (https://developer.arm.com/tools-and-software/graphics-and-gaming/mali-texture-compression-tool)
  * ASTC Encoder (https://github.com/ARM-software/astc-encoder)
  *
- * ASTCs must be: Channel Type: Unsigned Normalized Bytes (UNorm) and Color Space: Linear RGB
+ * ASTCs must have a Channel Type of Unsigned Normalized Bytes (UNorm) and a Linear RGB Color Space.
  *
  * The file is **not** loaded right away. It is added to a queue ready to be loaded either when the loader starts,
  * or if it's already running, when the next free load slot becomes available. This happens automatically if you
@@ -798,42 +909,28 @@ class $6db036c6cbb638f8$export$2e2bcd8739ae039 extends Phaser.Plugins.BasePlugin
  * Loading a file using a key that is already taken will result in a warning. If you wish to replace an existing file
  * then remove it from the Texture Manager first, before loading a new one.
  *
- * Instead of passing arguments you can pass a configuration object, such as:
- *
- * ```javascript
- * this.load.texture({
- *     key: 'doom',
- *     url: 'files/Doom.wad',
- *     dataType: Uint8Array
- * });
- * ```
- *
- * See the documentation for `Phaser.Types.Loader.FileTypes.CompressedTextureFileConfig` for more details.
- *
  * If you have specified a prefix in the loader, via `Loader.setPrefix` then this value will be prepended to this files
  * key. For example, if the prefix was `LEVEL1.` and the key was `Data` the final key will be `LEVEL1.Data` and
  * this is what you would use to retrieve the text from the Texture Manager.
  *
  * The URL can be relative or absolute. If the URL is relative the `Loader.baseURL` and `Loader.path` values will be prepended to it.
  *
- * Unlike other file loads in Phaser, you must provide a URL and extension.
+ * Unlike other file loaders in Phaser, the URLs must include the file extension.
  *
  * Note: The ability to load this type of file will only be available if the Compressed Texture File type has been built into Phaser.
  * It is available in the default build but can be excluded from custom builds.
  *
  * @method Phaser.Loader.LoaderPlugin#texture
  * @fires Phaser.Loader.LoaderPlugin#ADD
- * @since 3.60.0
  *
- * @param {string} key - The key to use for this file.
- * @param {Phaser.Types.Loader.FileTypes.CompressedTextureFileConfig} urls - The compressed texture configuration object.
+ * @param {(string|Phaser.Types.Loader.FileTypes.CompressedTextureFileConfig|Phaser.Types.Loader.FileTypes.CompressedTextureFileConfig[])} key - The key to use for this file, or a file configuration object, or array of them.
+ * @param {Phaser.Types.Loader.FileTypes.CompressedTextureFileConfig} [url] - The compressed texture configuration object. Not required if passing a config object as the `key` parameter.
  * @param {Phaser.Types.Loader.XHRSettingsObject} [xhrSettings] - An XHR Settings configuration object. Used in replacement of the Loaders default XHR Settings.
  *
  * @return {this} The Loader instance.
- */ function $6db036c6cbb638f8$var$compressedTextureLoaderCallback(key1, url, xhrSettings1) {
+ */ function $5edd43142d19b380$var$compressedTextureLoaderCallback(key1, url, xhrSettings1) {
     const renderer = this.systems.renderer;
     const AddEntry = function(loader, key, urls, xhrSettings) {
-        console.log('AddEntry()');
         let entry = {
             format: null,
             type: null,
@@ -843,35 +940,30 @@ class $6db036c6cbb638f8$export$2e2bcd8739ae039 extends Phaser.Plugins.BasePlugin
             multiPath: undefined,
             multiBaseURL: undefined
         };
-        if (($parcel$interopDefault($7Rbkr$phasersrcutilsobjectIsPlainObject))(key)) {
+        if (($parcel$interopDefault($6PZGQ$phasersrcutilsobjectIsPlainObject))(key)) {
             const config = key;
-            key = ($parcel$interopDefault($7Rbkr$phasersrcutilsobjectGetFastValue))(config, 'key');
-            urls = ($parcel$interopDefault($7Rbkr$phasersrcutilsobjectGetFastValue))(config, 'url'), xhrSettings = ($parcel$interopDefault($7Rbkr$phasersrcutilsobjectGetFastValue))(config, 'xhrSettings');
+            key = ($parcel$interopDefault($6PZGQ$phasersrcutilsobjectGetFastValue))(config, 'key');
+            urls = ($parcel$interopDefault($6PZGQ$phasersrcutilsobjectGetFastValue))(config, 'url'), xhrSettings = ($parcel$interopDefault($6PZGQ$phasersrcutilsobjectGetFastValue))(config, 'xhrSettings');
         }
         let matched = false;
-        for(let textureBaseFormat in urls){
-            console.log({
-                textureBaseFormat: textureBaseFormat
-            });
-            if (renderer.supportsCompressedTexture(textureBaseFormat)) {
-                const urlEntry = urls[textureBaseFormat];
-                if (typeof urlEntry === 'string') entry.textureURL = urlEntry;
-                else entry = ($parcel$interopDefault($7Rbkr$phasersrcutilsobjectMerge))(urlEntry, entry);
-                entry.format = textureBaseFormat.toUpperCase();
-                matched = true;
-                break;
-            }
+        for(let textureBaseFormat in urls)if (renderer.supportsCompressedTexture(textureBaseFormat)) {
+            const urlEntry = urls[textureBaseFormat];
+            if (typeof urlEntry === 'string') entry.textureURL = urlEntry;
+            else entry = ($parcel$interopDefault($6PZGQ$phasersrcutilsobjectMerge))(urlEntry, entry);
+            entry.format = textureBaseFormat.toUpperCase();
+            matched = true;
+            break;
         }
         if (!matched) console.warn('No supported compressed texture format or IMG fallback', key);
         else if (entry.format === 'IMG') {
             let multifile;
             if (entry.multiAtlasURL) {
-                multifile = new ($parcel$interopDefault($7Rbkr$phasersrcloaderfiletypesMultiAtlasFile))(this, key, entry.multiAtlasURL, entry.multiPath, entry.multiBaseURL, xhrSettings);
+                multifile = new ($parcel$interopDefault($6PZGQ$phasersrcloaderfiletypesMultiAtlasFile))(this, key, entry.multiAtlasURL, entry.multiPath, entry.multiBaseURL, xhrSettings);
                 loader.addFile(multifile.files);
             } else if (entry.atlasURL) {
-                multifile = new ($parcel$interopDefault($7Rbkr$phasersrcloaderfiletypesAtlasJSONFile))(loader, key, entry.textureURL, entry.atlasURL, xhrSettings);
+                multifile = new ($parcel$interopDefault($6PZGQ$phasersrcloaderfiletypesAtlasJSONFile))(loader, key, entry.textureURL, entry.atlasURL, xhrSettings);
                 loader.addFile(multifile.files);
-            } else loader.addFile(new ($parcel$interopDefault($7Rbkr$phasersrcloaderfiletypesImageFile))(loader, key, entry.textureURL, xhrSettings));
+            } else loader.addFile(new ($parcel$interopDefault($6PZGQ$phasersrcloaderfiletypesImageFile))(loader, key, entry.textureURL, xhrSettings));
         } else {
             const texture = new $1376e04d92df3da4$export$2e2bcd8739ae039(loader, key, entry, xhrSettings);
             loader.addFile(texture.files);
