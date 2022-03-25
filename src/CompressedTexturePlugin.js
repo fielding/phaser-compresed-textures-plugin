@@ -478,7 +478,6 @@ function compressedTextureLoaderCallback(key, url, xhrSettings) {
   const renderer = this.systems.renderer;
 
   const AddEntry = function (loader, key, urls, xhrSettings) {
-    console.log('AddEntry()');
     let entry = {
       format: null,
       type: null,
@@ -499,8 +498,6 @@ function compressedTextureLoaderCallback(key, url, xhrSettings) {
     let matched = false;
 
     for (let textureBaseFormat in urls) {
-      console.log({ textureBaseFormat });
-
       if (renderer.supportsCompressedTexture(textureBaseFormat)) {
         const urlEntry = urls[textureBaseFormat];
 

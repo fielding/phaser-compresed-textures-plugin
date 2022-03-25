@@ -36,7 +36,6 @@ var CompressedTextureFile = new Class({
   Extends: MultiFile,
 
   initialize: function CompressedTextureFile(loader, key, entry, xhrSettings) {
-    console.log('CompressedTextureFile()::ctor', { loader, key, entry, xhrSettings });
     if (entry.multiAtlasURL) {
       var multi = new JSONFile(loader, {
         key: key,
@@ -48,7 +47,6 @@ var CompressedTextureFile = new Class({
       MultiFile.call(this, loader, 'texture', key, [multi]);
     } else {
       var extension = entry.textureURL.substr(entry.textureURL.length - 3);
-      console.log({ extension });
 
       if (!entry.type) {
         entry.type = extension.toLowerCase() === 'ktx' ? 'KTX' : 'PVR';
@@ -61,8 +59,6 @@ var CompressedTextureFile = new Class({
         xhrSettings: xhrSettings,
         config: entry,
       });
-
-      console.log({ image });
 
       if (entry.atlasURL) {
         var data = new JSONFile(loader, {
@@ -166,7 +162,6 @@ var CompressedTextureFile = new Class({
    * @method Phaser.Loader.FileTypes.CompressedTextureFile#addToCache
    */
   addToCache: function () {
-    console.log('addToCache()');
     if (this.isReadyToProcess()) {
       var entry = this.config;
 
@@ -182,10 +177,8 @@ var CompressedTextureFile = new Class({
 
         if (entry.type === 'PVR') {
           textureData = PVRParser(image.data);
-          console.log('pvr parsed data: ', textureData);
         } else if (entry.type === 'KTX') {
           textureData = KTXParser(image.data);
-          console.log('ktx parsed data: ', textureData);
         }
 
         if (textureData && renderer.supportsCompressedTexture(entry.format, textureData.internalFormat)) {
