@@ -8,8 +8,9 @@
 import BinaryFile from 'phaser/src/loader/filetypes/BinaryFile';
 import Class from 'phaser/src/utils/Class';
 import JSONFile from 'phaser/src/loader/filetypes/JSONFile';
-import MultiFile from 'phaser/src/loader/MultiFile';
 import GetFastValue from 'phaser/src/utils/object/GetFastValue';
+
+import MultiFile from './MultiFile';
 import KTXParser from './KTXParser';
 import PVRParser from './PVRParser';
 

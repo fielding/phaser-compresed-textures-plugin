@@ -380,10 +380,10 @@ export default class CompressedTextureLoaderPlugin extends Phaser.Plugins.BasePl
  *     const path = 'assets/compressed';
  *
  *     this.load.texture('yourAtlas', {
- *         'ASTC': { type: 'PVR', atlasURL: `${path}/textures.json` },
- *         'PVRTC': { type: 'PVR', atlasURL: `${path}/textures-pvrtc-4bpp-rgba.json` },
- *         'S3TC': { type: 'PVR', atlasURL: `${path}/textures-dxt5.json` },
- *         'IMG': { atlasURL: `${path}/textures.json` }
+ *         'ASTC': { type: 'PVR', multiAtlasURL: `${path}/textures.json` },
+ *         'PVRTC': { type: 'PVR', multiAtlasURL: `${path}/textures-pvrtc-4bpp-rgba.json` },
+ *         'S3TC': { type: 'PVR', multiAtlasURL: `${path}/textures-dxt5.json` },
+ *         'IMG': { multiAtlasURL: `${path}/textures.json` }
  *     });
  * }
  * ```
