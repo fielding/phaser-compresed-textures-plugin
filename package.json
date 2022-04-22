@@ -1,6 +1,6 @@
 {
   "name": "phaser-compressed-texture-plugin",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Phaser 3 Compressed Texture Plugin",
   "source": "src/CompressedTexturePlugin.js",
   "main": "dist/CompressedTexturePlugin.js",
