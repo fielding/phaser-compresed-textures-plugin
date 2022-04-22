@@ -521,7 +521,7 @@ function compressedTextureLoaderCallback(key, url, xhrSettings) {
       let multifile;
       if (entry.multiAtlasURL) {
         multifile = new MultiAtlasFile(
-          this,
+          loader,
           key,
           entry.multiAtlasURL,
           entry.multiPath,

@@ -958,7 +958,7 @@ class $5edd43142d19b380$export$2e2bcd8739ae039 extends Phaser.Plugins.BasePlugin
         else if (entry.format === 'IMG') {
             let multifile;
             if (entry.multiAtlasURL) {
-                multifile = new ($parcel$interopDefault($6PZGQ$phasersrcloaderfiletypesMultiAtlasFile))(this, key, entry.multiAtlasURL, entry.multiPath, entry.multiBaseURL, xhrSettings);
+                multifile = new ($parcel$interopDefault($6PZGQ$phasersrcloaderfiletypesMultiAtlasFile))(loader, key, entry.multiAtlasURL, entry.multiPath, entry.multiBaseURL, xhrSettings);
                 loader.addFile(multifile.files);
             } else if (entry.atlasURL) {
                 multifile = new ($parcel$interopDefault($6PZGQ$phasersrcloaderfiletypesAtlasJSONFile))(loader, key, entry.textureURL, entry.atlasURL, xhrSettings);
