@@ -943,8 +943,8 @@ var $1376e04d92df3da4$export$2e2bcd8739ae039 = $1376e04d92df3da4$var$CompressedT
         texture = this.create(key, textureData);
         texture.add('__BASE', 0, 0, 0, textureData.width, textureData.height);
         if (atlasData) {
-            if (Array.isArray(atlasData)) for(let i = 0; i < atlasData.length; i++)$6PZGQ$phasersrctexturesparsersJSONHash.JSONHash(texture, i, atlasData[i]);
-            else $6PZGQ$phasersrctexturesparsersJSONHash.JSONHash(texture, 0, atlasData);
+            if (Array.isArray(atlasData)) for(let i = 0; i < atlasData.length; i++)($parcel$interopDefault($6PZGQ$phasersrctexturesparsersJSONHash))(texture, i, atlasData[i]);
+            else ($parcel$interopDefault($6PZGQ$phasersrctexturesparsersJSONHash))(texture, 0, atlasData);
         }
         this.emit(($parcel$interopDefault($6PZGQ$phasersrctexturesevents)).ADD, key, texture);
     }

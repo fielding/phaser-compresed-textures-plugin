@@ -6,7 +6,7 @@
  */
 // @ts-nocheck - todo
 import AtlasJSONFile from 'phaser/src/loader/filetypes/AtlasJSONFile';
-import { JSONHash } from 'phaser/src/textures/parsers/JSONHash';
+import JSONHash from 'phaser/src/textures/parsers/JSONHash';
 import Events from 'phaser/src/textures/events';
 import Merge from 'phaser/src/utils/object/Merge';
 import ImageFile from 'phaser/src/loader/filetypes/ImageFile';

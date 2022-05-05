@@ -1,5 +1,5 @@
 import $kXgLj$phasersrcloaderfiletypesAtlasJSONFile from "phaser/src/loader/filetypes/AtlasJSONFile";
-import {JSONHash as $kXgLj$JSONHash} from "phaser/src/textures/parsers/JSONHash";
+import $kXgLj$phasersrctexturesparsersJSONHash from "phaser/src/textures/parsers/JSONHash";
 import $kXgLj$phasersrctexturesevents from "phaser/src/textures/events";
 import $kXgLj$phasersrcutilsobjectMerge from "phaser/src/utils/object/Merge";
 import $kXgLj$phasersrcloaderfiletypesImageFile from "phaser/src/loader/filetypes/ImageFile";
@@ -933,8 +933,8 @@ var $895fbc78e648d411$export$2e2bcd8739ae039 = $895fbc78e648d411$var$CompressedT
         texture = this.create(key, textureData);
         texture.add('__BASE', 0, 0, 0, textureData.width, textureData.height);
         if (atlasData) {
-            if (Array.isArray(atlasData)) for(let i = 0; i < atlasData.length; i++)$kXgLj$JSONHash(texture, i, atlasData[i]);
-            else $kXgLj$JSONHash(texture, 0, atlasData);
+            if (Array.isArray(atlasData)) for(let i = 0; i < atlasData.length; i++)$kXgLj$phasersrctexturesparsersJSONHash(texture, i, atlasData[i]);
+            else $kXgLj$phasersrctexturesparsersJSONHash(texture, 0, atlasData);
         }
         this.emit($kXgLj$phasersrctexturesevents.ADD, key, texture);
     }
